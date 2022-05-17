@@ -98,7 +98,7 @@ public class IsBlacklisted extends AbstractCommonIdentifier implements
 			try {
 				reasonForBlacklist = runSparqlFileForBlacklist(file, ind,
 						context);
-				if (reasonForBlacklist != NOT_BLACKLISTED)
+				if (!reasonForBlacklist.equals(NOT_BLACKLISTED))
 					break;
 			} catch (RuntimeException ex) {
 				log.error(
